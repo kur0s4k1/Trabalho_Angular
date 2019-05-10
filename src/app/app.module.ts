@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from 'src/home/home.component';
 import { RodapeComponent } from 'src/rodape/rodape.component';
 import { SobreComponent } from 'src/sobre/rodape.component';
+import { ErroComponent } from 'src/erro404/erro404.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, RodapeComponent, SobreComponent
+    AppComponent, HomeComponent, RodapeComponent, SobreComponent, ErroComponent
   ],
   imports: [
     BrowserModule,
