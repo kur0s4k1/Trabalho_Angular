@@ -26,7 +26,6 @@ export class ArrayComponent {
 
     alterar(i: number): void {
         this.estado = this.listaEstados[i];
-        this.estado = this.listaEstados[i];
         this.listaEstados.splice(i, 1);
     }
 

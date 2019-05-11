@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'sobre', component: SobreComponent},
   {path: 'soma', component: SomaComponent},
   {path: 'array', component: ArrayComponent},
-  {path: 'categoria', component: CategoriaComponent}
+  {path: 'categoria', component: CategoriaComponent},
   {path: '**', component: ErroComponent}
 ];
 
