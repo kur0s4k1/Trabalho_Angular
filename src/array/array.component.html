@@ -4,11 +4,11 @@
 
         <div class="row">
             <div>
-                <input class="form-control" type="text" name="nome" [(ngModel)]="estado.nome">
+                <input class="form-control" type="text" name="nome" [(ngModel)]="servico.estado.nome">
             </div>
 
             <div>
-                <input class="form-control" type="text" name="sigla" [(ngModel)]="estado.sigla">
+                <input class="form-control" type="text" name="sigla" [(ngModel)]="servico.estado.sigla">
             </div>
 
             <div>
@@ -29,7 +29,7 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let estado of listaEstados; let i = index">
+            <tr *ngFor="let estado of servico.listaEstados; let i = index">
                 <td>
                     {{estado.nome}}
                 </td>

@@ -2,10 +2,10 @@
     <form class="m-5">
         <div class="row">
             <div>
-                <input class="form-control" type="text" name="nome" [(ngModel)]="categoria.nome">
+                <input class="form-control" type="text" name="nome" [(ngModel)]="servico.categoria.nome">
             </div>
             <div>
-                <input class="form-control" type="text" name="nome" [(ngModel)]="categoria.descricao">
+                <input class="form-control" type="text" name="nome" [(ngModel)]="servico.categoria.descricao">
             </div>
             <div>
                 <button class="btn btn-primary" type="button" (click)="adicionar()">Adicionar</button>
@@ -20,7 +20,7 @@
             <th>Editar</th>
         </thead>
         <tbody>
-            <tr *ngFor="let categoria of listaCategoria; let i = index">
+            <tr *ngFor="let categoria of servico.listaCategoria; let i = index">
                 <td>
                     {{categoria.nome}}
                 </td>
@@ -32,7 +32,7 @@
                         (click)="excluir(i)"></button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-outline-primary fas fa-edit" (click)="alterar(i)"></button>
+                    <button type="button" class="btn btn-outline-primary fas fa-edit" (click)="editar(i)"></button>
                 </td>
             </tr>
         </tbody>

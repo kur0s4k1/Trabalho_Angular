@@ -1,27 +1,25 @@
 import { Component } from "@angular/core";
-import { Categoria } from "src/entidades/categoria";
+import { ServicoCategoria } from "src/servicos/servico.categoria";
 
 @Component({
     selector: 'categoria-component',
     templateUrl: 'categoria.component.html',
 })
 export class CategoriaComponent {
-    listaCategoria = new Array<Categoria>();
-    categoria: Categoria = new Categoria();
+    
+    servico: ServicoCategoria = new ServicoCategoria();
 
 
     adicionar(): void {
-        this.listaCategoria.push(this.categoria);
-        this.categoria = new Categoria();
+        this.servico.adicionar();
     }
 
     excluir(i: number): void {
-        this.listaCategoria.splice(i, 1);
+        this.servico.excluir(i);
     }
 
     editar(i: number): void {
-       this.categoria = this.listaCategoria[i];
-       this.listaCategoria.splice(i, 1);
+       this.servico.editar(i);
 
     }
 
