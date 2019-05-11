@@ -1,5 +1,7 @@
 import { Estado } from "src/entidades/estado";
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class ServicoEstado{
     
     listaEstados = new Array<Estado>();

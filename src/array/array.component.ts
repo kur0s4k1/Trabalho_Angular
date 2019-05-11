@@ -7,7 +7,11 @@ import { ServicoEstado } from "src/servicos/servico.estado";
 })
 export class ArrayComponent {
 
-    servico: ServicoEstado  = new ServicoEstado();
+    // private servico: ServicoEstado; //Atributo parametro
+
+    constructor(private servico: ServicoEstado){ //parametro Atributo
+        this.servico = servico;
+    }
 
     adicionar(): void {
         this.servico.adicionar();

@@ -30,11 +30,6 @@ export class SomaComponent {
 
     // Verificar Positivo ou Negativo
     positivo(): void {
-        // if (Number(this.numero4) >= 0) {
-        //     alert("Numero Positivo");
-        // }else{
-        //     alert("Numero Negativo");
-        // }
         let resultado: string = 'O numero informado e Positivo';
         if (Number(this.numero4) < 0) {
             resultado = 'O numero informado e Negativo';

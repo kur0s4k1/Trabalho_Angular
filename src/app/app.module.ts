@@ -11,6 +11,7 @@ import { RodapeComponent } from 'src/rodape/rodape.component';
 import { FormsModule } from '@angular/forms';
 import { ArrayComponent } from 'src/array/array.component';
 import { CategoriaComponent } from 'src/categoria/categoria.component';
+import { ServicoEstado } from 'src/servicos/servico.estado';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CategoriaComponent } from 'src/categoria/categoria.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServicoEstado],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
