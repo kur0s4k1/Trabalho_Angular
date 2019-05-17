@@ -29,7 +29,7 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let estado of servico.listaEstados; let i = index">
+            <tr *ngFor="let estado of estaddos$ | async">
                 <td>
                     {{estado.nome}}
                 </td>
