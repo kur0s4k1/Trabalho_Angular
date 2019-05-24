@@ -4,11 +4,11 @@
 
         <div class="row">
             <div>
-                <input class="form-control" type="text" name="nome" [(ngModel)]="servico.estado.nome">
+                <input class="form-control" type="text" name="nome" [(ngModel)]="estado.nome">
             </div>
 
             <div>
-                <input class="form-control" type="text" name="sigla" [(ngModel)]="servico.estado.sigla">
+                <input class="form-control" type="text" name="sigla" [(ngModel)]="estado.sigla">
             </div>
 
             <div>
@@ -29,7 +29,7 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let estado of estaddos$ | async">
+            <tr *ngFor="let estado of estados$ | async">
                 <td>
                     {{estado.nome}}
                 </td>
@@ -37,9 +37,9 @@
                     {{estado.sigla}}
                 </td>
                 <td>
-                    <button type="button" class="btn btn-outline-primary fas fa-trash-alt" (click)="excluir(i)"></button></td>
+                    <button type="button" class="btn btn-outline-primary fas fa-trash-alt" (click)="excluir(estado.id)"></button></td>
                 <td>
-                    <button type="button" class="btn btn-outline-primary fas fa-edit" (click)="alterar(i)"></button>
+                    <button type="button" class="btn btn-outline-primary fas fa-edit" (click)="alterar(estado)"></button>
                 </td>
             </tr>
         </tbody>

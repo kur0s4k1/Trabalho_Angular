@@ -6,6 +6,7 @@ import { take } from "rxjs/operators";
 @Injectable()
 export class ServicoEstado{
     private readonly URL = "http://localhost:8080/ws/estado/";
+
     listaEstados = new Array<Estado>();
     estado: Estado = new Estado();
 
@@ -13,18 +14,16 @@ export class ServicoEstado{
 
     }
 
-    adicionar(): void {
-        this.listaEstados.push(this.estado);
-        this.estado = new Estado();
+    adicionar(estado: Estado) {
+       return this.http.post(this.URL, estado).pipe(take(1));
     }
 
-    excluir(i: number): void {
-        this.listaEstados.splice(i, 1);
+    excluir(id: number) {
+       return this.http.delete(this.URL+id).pipe(take(1));
     }
 
-    alterar(i: number): void {
-        this.estado = this.listaEstados[i];
-        this.listaEstados.splice(i, 1);
+    alterar(estado: Estado) {
+        return this.http.put(this.URL, estado).pipe(take(1));
     }
 
     buscar(){
