@@ -39,7 +39,6 @@ public class RestEstado {
 	public void excluir(@PathVariable("id") int id) {
 		dao.deleteById(id);
 	}
-	
 	@RequestMapping(method=RequestMethod.PUT)
 	public void alterar(@RequestBody Estado estado) {
 		Estado estadoVeio = dao.findById(estado.getId()).get();

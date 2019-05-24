@@ -16,7 +16,7 @@ import br.ifpr.webservice.entidade.Cidade;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/ws/estado/")
+@RequestMapping("/ws/cidade/")
 public class RestCidade {
 	
 	@Autowired
