@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ArrayComponent } from 'src/array/array.component';
 import { CategoriaComponent } from 'src/categoria/categoria.component';
 import { ServicoEstado } from 'src/servicos/servico.estado';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
