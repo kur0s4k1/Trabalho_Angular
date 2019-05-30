@@ -13,10 +13,13 @@ import { ArrayComponent } from 'src/array/array.component';
 import { CategoriaComponent } from 'src/categoria/categoria.component';
 import { ServicoEstado } from 'src/servicos/servico.estado';
 import { HttpClientModule } from '@angular/common/http';
+import { CidadaComponent } from 'src/cidade/cidade.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, RodapeComponent, SobreComponent, ErroComponent, SomaComponent, ArrayComponent, CategoriaComponent
+    AppComponent, HomeComponent, RodapeComponent, SobreComponent, ErroComponent, SomaComponent, ArrayComponent, CategoriaComponent,
+    CidadaComponent,
+
   ],
   imports: [
     BrowserModule,

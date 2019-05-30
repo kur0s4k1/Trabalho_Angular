@@ -6,6 +6,7 @@ import { ErroComponent } from 'src/erro404/erro404.component';
 import { SomaComponent } from 'src/soma/soma.component';
 import { ArrayComponent } from 'src/array/array.component';
 import { CategoriaComponent } from 'src/categoria/categoria.component';
+import { CidadaComponent } from 'src/cidade/cidade.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'soma', component: SomaComponent},
   {path: 'array', component: ArrayComponent},
   {path: 'categoria', component: CategoriaComponent},
+  {path: 'cidade', component: CidadaComponent},
   {path: '**', component: ErroComponent}
 ];
 

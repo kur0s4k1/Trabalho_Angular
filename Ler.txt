@@ -1,0 +1,6 @@
+Trocar a pasta repository, 
+
+-ver pastas invisiveis.
+-.m2
+-colar pasta e trocar os arquivos.
+- ir no eclipse, mave, update project, offline, e importar e ok.
