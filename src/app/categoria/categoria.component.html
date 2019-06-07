@@ -1,0 +1,52 @@
+<div class="container">
+    <form class="m-5" [formGroup]="categoriaForm">
+        <div>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="categoria.nome" name="nome" placeholder="Nome da categoria"
+                    formControlName="nome">
+                <mat-error *ngIf="categoriaForm.controls.nome.hasError('required')">
+                    Coloque o nome da categoria.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="categoria.descricao" name="descricao" placeholder="Descrição"
+                    formControlName="descricao">
+                <mat-error *ngIf="categoriaForm.controls.descricao.hasError('required')">
+                    Coloque a nome da descrição.
+                </mat-error>
+            </mat-form-field>
+            <div class="">
+                <button mat-raised-button color="accent" [disabled]="!categoriaForm.valid"
+                    (click)='adicionar()'>Adicionar</button>
+                <!-- <button class="btn btn-info" type="button" name="button" (click)='adicionar()'>adicionar</button> -->
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">NOME</th>
+                <th scope="col">DESCRIÇÃO</th>
+                <th scope="col">EXCLUIR</th>
+                <th scope="col">ALTERAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let categoria of categorias$ | async">
+                <td>{{categoria.nome}}</td>
+                <td>{{categoria.descricao}}</td>
+                <td>
+                    <button class="btn btn-info" type="button" name="button" (click)="excluir(categoria.id)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-info" type="button" name="button" (click)="alterar(categoria)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

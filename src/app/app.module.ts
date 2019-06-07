@@ -3,29 +3,34 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from 'src/home/home.component';
-import { SobreComponent } from 'src/sobre/rodape.component';
-import { ErroComponent } from 'src/erro404/erro404.component';
-import { SomaComponent } from 'src/soma/soma.component';
-import { RodapeComponent } from 'src/rodape/rodape.component';
-import { FormsModule } from '@angular/forms';
-import { ArrayComponent } from 'src/array/array.component';
-import { CategoriaComponent } from 'src/categoria/categoria.component';
-import { ServicoEstado } from 'src/servicos/servico.estado';
-import { HttpClientModule } from '@angular/common/http';
-import { CidadaComponent } from 'src/cidade/cidade.component';
+
+import { HomeComponent } from './home/home.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { Erro404Component } from './erro404/erro404.component';
+import { SomaComponent } from './soma/soma.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VetoresComponent } from './vetores/vetores.component';
+import { ServicoEstado } from './servicos/servico.estado';
+
+import {HttpClientModule } from '@angular/common/http';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, RodapeComponent, SobreComponent, ErroComponent, SomaComponent, ArrayComponent, CategoriaComponent,
-    CidadaComponent,
-
+    AppComponent, HomeComponent, RodapeComponent, SobreComponent, Erro404Component, SomaComponent, VetoresComponent, CategoriaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ServicoEstado],
   bootstrap: [AppComponent]
